@@ -10,6 +10,7 @@ gem 'haml'
 gem 'unicorn'
 gem 'jquery-rails'
 gem 'mechanize'
+gem 'jbuilder'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,0 +1,7 @@
+%ol
+  - @bars.each do |bar|
+    %li
+      = bar.name
+      %ol
+        - bar.beers.each do |beer|
+          %li= beer.name
