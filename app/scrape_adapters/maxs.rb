@@ -1,5 +1,6 @@
 class Maxs < BaseScraper
-  def self.scrape_beer_list(scraping_url)
+  def self.scrape_beer_list
+    scraping_url = 'http://www.maxs.com/'
     a = get_agent
     page = a.get(scraping_url)
     nodes = page / '#sidebar .p7TPcontent li'

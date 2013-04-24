@@ -1,5 +1,5 @@
 class Bar < ActiveRecord::Base
-  attr_accessible :name, :homepage_url, :scraping_url, :adapter
+  attr_accessible :name, :homepage_url, :adapter
 
   has_many :beers
 
@@ -16,7 +16,7 @@ class Bar < ActiveRecord::Base
   def scrape
     return unless adapter
     beers.destroy_all
-    adapter.constantize.send(:scrape_beer_list, scraping_url).each do |beer_name|
+    adapter.constantize.send(:scrape_beer_list).each do |beer_name|
       beers.create(name: beer_name)
     end
   end

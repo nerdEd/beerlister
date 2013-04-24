@@ -1,5 +1,5 @@
 class BaseScraper
-  def self.scrape_beer_list(scraping_url)
+  def self.scrape_beer_list
     raise 'You should not use the base scraper, bad programmer!'
   end
 

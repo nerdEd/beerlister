@@ -1,5 +1,6 @@
 class Mahaffeys < BaseScraper
-  def self.scrape_beer_list(scraping_url)
+  def self.scrape_beer_list
+    scraping_url = 'http://www.mahaffeyspub.com/beer/beers_in_stock.php'
     a = get_agent
     page = a.get(scraping_url)
     lines = (page / 'body').to_s
